@@ -345,6 +345,7 @@ dialog#previewDlg{width:min(720px,100% - 32px);height:min(860px,92vh);max-height
 .cf-chip:hover{border-color:var(--gold);color:var(--cream)}
 .cf-chip.active{background:var(--gold);border-color:var(--gold);color:var(--black)}
 .cf-submit{width:100%;margin-top:8px;cursor:pointer}
+.cf-error{margin:14px 0 0;font-size:15px;color:#e0a08a;text-align:center;line-height:1.5}
 .cf-fine{margin:16px 0 0;font-size:16px;color:var(--muted);font-style:italic;text-align:center}
 
 .cf-done{text-align:center;padding:26px 6px;position:relative;z-index:1}

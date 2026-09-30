@@ -8,7 +8,7 @@ tiltify($("#contactPanel"), { max: 3, glow: true });
    Sign up at https://formspree.io, create a form, and paste your endpoint ID below in place of
    "YOUR_FORM_ID" (the URL Formspree gives you looks like https://formspree.io/f/abcd1234 --
    just the "abcd1234" part goes here). That's the only change needed to make this live. */
-const FORMSPREE_ID = "YOUR_FORM_ID";
+const FORMSPREE_ID = "xvkgyvza";
 
 $$(".cf-chip").forEach(chip => {
   chip.addEventListener("click", () => {
@@ -17,9 +17,10 @@ $$(".cf-chip").forEach(chip => {
     $("#cf-interest").value = chip.dataset.val;
   });
 });
-const inquiryForm = $("#inquiryForm"), cfDone = $("#cfDone"), cfSubmit = $(".cf-submit");
+const inquiryForm = $("#inquiryForm"), cfDone = $("#cfDone"), cfSubmit = $(".cf-submit"), cfError = $("#cfError");
 inquiryForm.addEventListener("submit", async e => {
   e.preventDefault();
+  cfError.hidden = true;
   cfSubmit.disabled = true;
   cfSubmit.textContent = "Sending…";
   try {
@@ -34,7 +35,7 @@ inquiryForm.addEventListener("submit", async e => {
   } catch (err) {
     cfSubmit.disabled = false;
     cfSubmit.textContent = "Send Inquiry";
-    alert("Something went wrong sending your message. Please try again, or email us directly.");
+    cfError.hidden = false;
   }
 });
 $("#cfReset").addEventListener("click", () => {
