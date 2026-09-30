@@ -261,7 +261,7 @@ const lockedPanel = (size) => `
   <div class="locked-panel ${size || ""}">
     <span class="lock-ic" aria-hidden="true">&#128274;</span>
     <p class="locked-line">Available in <strong>KOREL Vol. I</strong></p>
-    <a class="btn small solid" href="https://payhip.com/YOUR_PRODUCT_LINK">Buy Volume I</a>
+    <a class="btn small solid" href="https://payhip.com/b/WbtS7">Buy Volume I</a>
   </div>`;
 
 const tabsEl = $("#menuTabs"), detailEl = $("#menuDetail");
@@ -533,7 +533,7 @@ previewDlg.addEventListener("keydown", e => {
    whichever platform (Payhip, etc.) ends up handling the real purchase ---------- */
 const printAddon = $("#printAddon"), volPrice = $("#volPrice");
 printAddon.addEventListener("change", () => {
-  volPrice.textContent = printAddon.checked ? "$22" : "$17";
+  volPrice.textContent = printAddon.checked ? "$24" : "$19";
 });
 
 /* ---------- magnetic hover: the hero buttons drift gently toward the cursor ---------- */
