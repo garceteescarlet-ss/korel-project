@@ -507,12 +507,15 @@ previewDlg.addEventListener("keydown", e => {
   if (e.key === "ArrowRight") pvNext.click();
 });
 
-/* ---------- Printable Edition add-on: just updates the displayed price here -- actually
-   offering it as a real add-on at checkout needs a second variant/price option set up on
-   whichever platform (Payhip, etc.) ends up handling the real purchase ---------- */
-const printAddon = $("#printAddon"), volPrice = $("#volPrice");
+/* ---------- Printable Edition add-on: toggles both the displayed price and where
+   "Buy Volume I" actually goes -- the PDF-only product vs. the bundle that includes
+   the Printable Edition too. Swap in the real bundle link once it exists on Payhip. ---------- */
+const printAddon = $("#printAddon"), volPrice = $("#volPrice"), buyBtn = $("#buyBtn");
+const PDF_ONLY_LINK = "https://payhip.com/b/WbtS7";
+const BUNDLE_LINK = "https://payhip.com/b/AlwmY";
 printAddon.addEventListener("change", () => {
   volPrice.textContent = printAddon.checked ? "$24" : "$19";
+  buyBtn.href = printAddon.checked ? BUNDLE_LINK : PDF_ONLY_LINK;
 });
 
 /* ---------- magnetic hover: the hero buttons drift gently toward the cursor ---------- */
