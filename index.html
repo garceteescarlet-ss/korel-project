@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KOREL | A Cocktail Portfolio</title>
+<meta name="description" content="Seven original craft cocktails, house syrups, and seasonal drops. KOREL, a cocktail portfolio.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KOREL">
+<meta property="og:title" content="KOREL | A Cocktail Portfolio">
+<meta property="og:description" content="Seven original craft cocktails, house syrups, and seasonal drops. KOREL, a cocktail portfolio.">
+<meta property="og:url" content="https://houseofkorel.com/">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KOREL | A Cocktail Portfolio">
+<meta name="twitter:description" content="Seven original craft cocktails, house syrups, and seasonal drops. KOREL, a cocktail portfolio.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grain locked">
+
+<!-- decorative gold veins that draw as you scroll -->
+<svg id="veins" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+  <path pathLength="1" d="M100,0 C93,9 97,19 89,29 S95,47 87,58 S93,78 85,88 S91,96 87,100"/>
+  <path class="thin" pathLength="1" d="M89,29 C83,33 85,40 79,44 S80,52 75,56"/>
+  <path pathLength="1" d="M0,18 C6,27 3,36 9,46 S4,62 11,71 S5,87 8,100"/>
+  <path class="thin" pathLength="1" d="M9,46 C14,50 13,57 18,61"/>
+</svg>
+
+<!-- age gate -->
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-half top" aria-hidden="true"></div>
+  <div class="gate-half bottom" aria-hidden="true"></div>
+  <div class="gate-box">
+    <div class="gate-welcome">
+      <img src="assets/logo.png" alt="KOREL">
+      <h2 id="gate-title">Welcome</h2>
+      <p>Please confirm you&rsquo;re 21 or older to enter.</p>
+      <div class="gate-actions">
+        <button class="btn solid" id="age-yes">I am 21 or older</button>
+        <button class="btn" id="age-no">I am under 21</button>
+      </div>
+      <p id="gate-msg" hidden>Thank you for your honesty. Please come back when you are of legal drinking age.</p>
+    </div>
+    <div class="gate-loading" aria-hidden="true">
+      <img src="assets/logo.png" alt="">
+      <p class="gl-label">Entering</p>
+      <div class="gl-bar"><div class="gl-fill" id="glFill"></div></div>
+      <p class="gl-pct" id="glPct">0%</p>
+    </div>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" aria-label="KOREL home"><img src="assets/logo.png" class="logo" alt="KOREL"></a>
+    <nav aria-label="Main">
+      <button class="menu-trigger" id="menuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="megaMenu">
+        <span class="mt-lines" aria-hidden="true"><span></span><span></span></span>
+        <span class="mt-label">Menu</span>
+      </button>
+      <a class="btn small" href="#collection">Shop</a>
+    </nav>
+  </div>
+  <div class="nav-progress" aria-hidden="true"></div>
+</header>
+
+<div class="mega-menu" id="megaMenu" aria-hidden="true">
+  <div class="mega-inner">
+    <button class="mega-close" id="megaClose" aria-label="Close menu">&times;</button>
+    <p class="mega-kicker">A Cocktail Portfolio</p>
+    <nav class="mega-nav" aria-label="Full site navigation">
+      <a href="#top" class="mega-link" style="--d:0"><span class="mega-num">01</span><span class="mega-inner-flip">Home</span></a>
+      <a href="#about" class="mega-link" style="--d:1"><span class="mega-num">02</span><span class="mega-inner-flip">Behind KOREL</span></a>
+      <a href="#menu" class="mega-link" style="--d:2"><span class="mega-num">03</span><span class="mega-inner-flip">The Menu</span></a>
+      <a href="#collection" class="mega-link" style="--d:3"><span class="mega-num">04</span><span class="mega-inner-flip">Collection</span></a>
+      <a href="gallery.html" class="mega-link" style="--d:4"><span class="mega-num">05</span><span class="mega-inner-flip">Gallery</span></a>
+      <a href="contact.html" class="mega-link" style="--d:5"><span class="mega-num">06</span><span class="mega-inner-flip">Consulting</span></a>
+    </nav>
+    <div class="mega-foot"><a class="btn solid" href="#collection">Shop Volume I</a></div>
+  </div>
+</div>
+
+<main>
+  <section class="hero" id="top">
+    <canvas id="pcanvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <p class="eyebrow reveal after-pour">A Cocktail Portfolio</p>
+      <div class="fx" id="fx"><img src="assets/logo.png" class="ghost" alt="KOREL"></div>
+      <p class="hero-line reveal after-pour">Creativity. Connection. Memories.<br>And never being afraid to try something new.</p>
+      <div class="cta reveal after-pour">
+        <a class="btn solid" href="#collection">Shop Volume I</a>
+        <a class="btn" href="#menu">Explore the menu</a>
+      </div>
+      <button class="replay after-pour" id="replay" type="button">&#8635; Pour again</button>
+    </div>
+  </section>
+
+  <section class="section" id="about" style="padding-top:0">
+    <div class="wrap about-wrap">
+      <p class="kicker reveal">The story behind it</p>
+      <h2 class="reveal">Behind KOREL</h2>
+      <span class="story-rule reveal" aria-hidden="true"></span>
+
+      <div class="story-panel reveal" id="storyPanel">
+        <div class="sp-sheen" aria-hidden="true"></div>
+        <div class="sp-flow">
+          <p class="sp-lead"><span class="dropcap">F</span>or me, creating has always been about more than making a good cocktail.</p>
+          <p>KOREL is an extension of who I am&mdash;my creativity, my family, the memories I&rsquo;ve made, and my willingness to keep trying something new.</p>
+          <p>I&rsquo;m inspired by moments. A conversation. A celebration. A familiar flavor that brings back a memory. A new ingredient I&rsquo;ve never worked with before. Sometimes the smallest experience can become the beginning of an idea.</p>
+          <p>Behind the bar, I&rsquo;ve learned that some of the best creations come from being willing to experiment. I like taking flavors people recognize and finding a different way to bring them together&mdash;trying, adjusting, tasting, and sometimes starting over until everything feels right.</p>
+          <p>Family and memorable times are a big part of what drives me. They remind me that food and drinks aren&rsquo;t only about what we taste. They&rsquo;re often connected to the people we were with and the moments we don&rsquo;t forget.</p>
+          <p class="sp-close">That&rsquo;s what I want KOREL to represent.</p>
+        </div>
+      </div>
+
+      <p class="about-sign reveal"><em>Creativity. Connection. Memories.</em><br><em>And never being afraid to try something new.</em></p>
+    </div>
+  </section>
+
+  <section class="section menu-hero" id="menu">
+    <div class="wrap" style="max-width:720px">
+      <p class="kicker reveal">Seven original cocktails</p>
+      <h2 class="reveal">The Menu</h2>
+      <p class="lede reveal">Select a number to pour. One is free to try in full.</p>
+
+      <div class="menu-tabs reveal" id="menuTabs"></div>
+
+      <div class="pour-stage reveal" id="pourStage">
+        <canvas id="menuCanvas" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="menu-detail" id="menuDetail" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="consult">
+    <div class="wrap reveal">
+      <p class="kicker">Work with KOREL</p>
+      <h2>Consulting</h2>
+      <p class="consult-line">From private events to bar programs and custom menus, KOREL offers hands-on consulting for anyone who wants something built just for them.</p>
+      <a class="btn solid" href="contact.html">Inquire</a>
+    </div>
+  </section>
+
+  <section class="section" id="collection">
+    <div class="wrap">
+      <p class="kicker reveal">Recipes to keep</p>
+      <h2 class="reveal">The Collection</h2>
+      <p class="lede reveal">New volumes and seasonal drops, each one a set of recipes written to be made at home.</p>
+      <div class="shelf">
+        <article class="vol reveal">
+          <div class="book photo-cover"><img src="assets/vol1-cover.jpg" alt="KOREL Volume I enamel pin cover, a small black and gold book charm engraved with the KOREL wordmark and a coupe glass"><span>Vol. I</span></div>
+          <h3>Volume I</h3>
+          <p>Seven signature cocktails, house syrups, and the story behind them.</p>
+          <span class="price" id="volPrice">$17</span>
+          <label class="addon">
+            <input type="checkbox" id="printAddon">
+            <span>+ Printable Edition (+$5)</span>
+          </label>
+          <div class="vol-actions">
+            <a class="btn solid" href="https://payhip.com/YOUR_PRODUCT_LINK">Buy Volume I</a>
+            <a class="btn" href="assets/KOREL_Volume_I_Preview.pdf" id="previewBtn">Preview Volume I</a>
+          </div>
+        </article>
+        <article class="vol reveal">
+          <div class="book soon"><img src="assets/logo.png" alt=""><span>Vol. II</span></div>
+          <h3>Volume II</h3>
+          <p>The next collection is in the works.</p>
+          <span class="price">Coming soon</span>
+        </article>
+        <article class="vol reveal">
+          <div class="book photo-cover"><img src="assets/seasonal-cover.jpg" alt="A bartender pouring a fresh cocktail from a shaker into a glass at the bar"><span>Seasonal</span></div>
+          <h3>Seasonal Drops</h3>
+          <p>Small releases of new drinks, timed to the season.</p>
+          <span class="price">Coming soon</span>
+        </article>
+      </div>
+      <div class="shelf-line"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/logo.png" alt="KOREL">
+        <div>Please drink responsibly. Must be 21 or older.</div>
+      </div>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="license.html">License</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© 2026 KOREL. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Back to top">
+  <svg viewBox="0 0 44 44" aria-hidden="true">
+    <circle class="ring-bg" cx="22" cy="22" r="19"></circle>
+    <circle class="ring-fg" id="toTopRing" cx="22" cy="22" r="19"></circle>
+  </svg>
+  <span class="arrow">&#8593;</span>
+</button>
+
+<dialog id="recipe" aria-labelledby="r-name">
+  <div class="dlg" id="recipe-body"></div>
+</dialog>
+
+<dialog id="previewDlg" aria-label="KOREL Volume I Preview">
+  <div class="pdf-dlg">
+    <button class="x" id="previewClose" aria-label="Close preview">&times;</button>
+    <div class="pv-stage">
+      <img id="previewImg" alt="KOREL Volume I preview page">
+      <button class="pv-arrow pv-prev" id="pvPrev" aria-label="Previous page">&#8249;</button>
+      <button class="pv-arrow pv-next" id="pvNext" aria-label="Next page">&#8250;</button>
+    </div>
+    <div class="pv-foot">
+      <span id="pvCount">Page 1 of 6</span>
+      <a href="assets/KOREL_Volume_I_Preview.pdf" download="KOREL_Volume_I_Preview.pdf">Download the PDF</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/main.js" defer></script>
+<script src="js/home.js" defer></script>
+</body>
+</html>

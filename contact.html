@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Consulting | KOREL</title>
+<meta name="description" content="Work with KOREL on private events, bar programs, custom cocktail menus, and brand collaborations.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KOREL">
+<meta property="og:title" content="Consulting | KOREL">
+<meta property="og:description" content="Work with KOREL on private events, bar programs, custom cocktail menus, and brand collaborations.">
+<meta property="og:url" content="https://houseofkorel.com/contact.html">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consulting | KOREL">
+<meta name="twitter:description" content="Work with KOREL on private events, bar programs, custom cocktail menus, and brand collaborations.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grain">
+
+<!-- decorative gold veins that draw as you scroll -->
+<svg id="veins" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+  <path pathLength="1" d="M100,0 C93,9 97,19 89,29 S95,47 87,58 S93,78 85,88 S91,96 87,100"/>
+  <path class="thin" pathLength="1" d="M89,29 C83,33 85,40 79,44 S80,52 75,56"/>
+  <path pathLength="1" d="M0,18 C6,27 3,36 9,46 S4,62 11,71 S5,87 8,100"/>
+  <path class="thin" pathLength="1" d="M9,46 C14,50 13,57 18,61"/>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" aria-label="KOREL home"><img src="assets/logo.png" class="logo" alt="KOREL"></a>
+    <nav aria-label="Main">
+      <button class="menu-trigger" id="menuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="megaMenu">
+        <span class="mt-lines" aria-hidden="true"><span></span><span></span></span>
+        <span class="mt-label">Menu</span>
+      </button>
+      <a class="btn small" href="index.html#collection">Shop</a>
+    </nav>
+  </div>
+  <div class="nav-progress" aria-hidden="true"></div>
+</header>
+
+<div class="mega-menu" id="megaMenu" aria-hidden="true">
+  <div class="mega-inner">
+    <button class="mega-close" id="megaClose" aria-label="Close menu">&times;</button>
+    <p class="mega-kicker">A Cocktail Portfolio</p>
+    <nav class="mega-nav" aria-label="Full site navigation">
+      <a href="index.html" class="mega-link" style="--d:0"><span class="mega-num">01</span><span class="mega-inner-flip">Home</span></a>
+      <a href="index.html#about" class="mega-link" style="--d:1"><span class="mega-num">02</span><span class="mega-inner-flip">Behind KOREL</span></a>
+      <a href="index.html#menu" class="mega-link" style="--d:2"><span class="mega-num">03</span><span class="mega-inner-flip">The Menu</span></a>
+      <a href="index.html#collection" class="mega-link" style="--d:3"><span class="mega-num">04</span><span class="mega-inner-flip">Collection</span></a>
+      <a href="gallery.html" class="mega-link" style="--d:4"><span class="mega-num">05</span><span class="mega-inner-flip">Gallery</span></a>
+      <a href="#top" class="mega-link" style="--d:5"><span class="mega-num">06</span><span class="mega-inner-flip">Consulting</span></a>
+    </nav>
+    <div class="mega-foot"><a class="btn solid" href="index.html#collection">Shop Volume I</a></div>
+  </div>
+</div>
+
+<main>
+  <section class="section contact-hero" id="top">
+    <div class="wrap" style="max-width:720px">
+      <a class="back reveal" href="index.html">&larr; Back to KOREL</a>
+      <p class="kicker reveal">Work with KOREL</p>
+      <h2 class="reveal">Let&rsquo;s Talk</h2>
+      <p class="lede reveal">Tell us a little about what you&rsquo;re planning, and we&rsquo;ll follow up to talk it through.</p>
+    </div>
+  </section>
+
+  <section class="section contact-section">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <h3>What we help with</h3>
+        <ul class="contact-list">
+          <li>Private events &amp; tastings</li>
+          <li>Bar programs &amp; consulting</li>
+          <li>Custom cocktail menus</li>
+          <li>Brand collaborations</li>
+        </ul>
+        <p class="contact-note">We typically respond within 2&ndash;3 business days.</p>
+      </div>
+
+      <div class="contact-form-wrap reveal" id="contactPanel">
+        <div class="cf-sheen" aria-hidden="true"></div>
+
+        <form id="inquiryForm" class="contact-form" novalidate>
+          <div class="cf-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name">
+          </div>
+          <div class="cf-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email">
+          </div>
+          <div class="cf-row">
+            <span class="cf-label">I&rsquo;m interested in</span>
+            <div class="cf-chips" role="group" aria-label="I'm interested in">
+              <button type="button" class="cf-chip" data-val="Private Event">Private Event</button>
+              <button type="button" class="cf-chip" data-val="Bar Program">Bar Program</button>
+              <button type="button" class="cf-chip" data-val="Custom Menu">Custom Menu</button>
+              <button type="button" class="cf-chip" data-val="Something Else">Something Else</button>
+            </div>
+            <input type="hidden" id="cf-interest" name="interest">
+          </div>
+          <div class="cf-row">
+            <label for="cf-date">Preferred date <span class="cf-optional">(optional)</span></label>
+            <input type="text" id="cf-date" name="date" placeholder="MM/DD/YYYY">
+          </div>
+          <div class="cf-row">
+            <label for="cf-message">Tell us about it</label>
+            <textarea id="cf-message" name="message" rows="4" required></textarea>
+          </div>
+          <button class="btn solid cf-submit" type="submit">Send Inquiry</button>
+        </form>
+
+        <div class="cf-done" id="cfDone" hidden>
+          <span class="cf-done-mark" aria-hidden="true">&#10003;</span>
+          <h3>Thank You</h3>
+          <p>Your inquiry has been noted. We&rsquo;ll be in touch within 2&ndash;3 business days.</p>
+          <button class="btn small" id="cfReset" type="button">Send another</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/logo.png" alt="KOREL">
+        <div>Please drink responsibly. Must be 21 or older.</div>
+      </div>
+      <ul>
+        <li><a href="index.html#top">Home</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#collection">Collection</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="license.html">License</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 KOREL. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Back to top">
+  <svg viewBox="0 0 44 44" aria-hidden="true">
+    <circle class="ring-bg" cx="22" cy="22" r="19"></circle>
+    <circle class="ring-fg" id="toTopRing" cx="22" cy="22" r="19"></circle>
+  </svg>
+  <span class="arrow">&#8593;</span>
+</button>
+
+<script src="js/main.js" defer></script>
+<script src="js/contact.js" defer></script>
+</body>
+</html>
